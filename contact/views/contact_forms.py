@@ -9,6 +9,6 @@ def create(request):
 
     return render(
         request,
-        'contact/index.html',
+        'contact/create.html',
         context,
     )
