@@ -21,6 +21,9 @@ class ContactForm(forms.ModelForm):
             'first_name',
             'last_name',
             'phone',
+            'email',
+            'description',
+            'category',
         )
 
     def clean(self):
