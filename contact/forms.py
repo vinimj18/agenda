@@ -4,6 +4,17 @@ from contact.models import Contact  # type: ignore
 
 
 class ContactForm(forms.ModelForm):
+    first_name = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                'class': 'classe-a classe-b',
+                'placeholder': "Enter the contact's first name",
+            }
+        ),
+        label='First Name from widget',
+        help_text='User help text',
+    )
+
     class Meta():
         model = Contact
         fields = (
