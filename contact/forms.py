@@ -4,15 +4,12 @@ from contact.models import Contact  # type: ignore
 
 
 class ContactForm(forms.ModelForm):
-    first_name = forms.CharField(
-        widget=forms.TextInput(
+    picture = forms.ImageField(
+        widget=forms.FileInput(
             attrs={
-                'class': 'classe-a classe-b',
-                'placeholder': "Enter the contact's first name",
+                'accept': 'images/*'
             }
-        ),
-        label='First Name from widget',
-        help_text='User help text',
+        )
     )
 
     class Meta():
@@ -24,6 +21,7 @@ class ContactForm(forms.ModelForm):
             'email',
             'description',
             'category',
+            'picture',
         )
 
     def clean(self):
