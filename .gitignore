@@ -7,6 +7,7 @@ db.sqlite3
 media
 static
 local_settings.py
+gunicorn.txt
 
 # Backup files # 
 *.bak 
